@@ -1,0 +1,19 @@
+name: My First CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Code checkout karo
+      uses: actions/checkout@v3
+      
+    - name: Hello print karo
+      run: echo "Hello Afaq! CI/CD chal gaya!"
+      
+    - name: Files dekho
+      run: ls
